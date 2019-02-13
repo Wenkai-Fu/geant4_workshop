@@ -1,9 +1,3 @@
-/*
- * SteppingAction.cc
- *
- *  Created on: Jul 3, 2017
- *      Author: kevin
- */
 #include "SteppingAction.hh"
 
 SteppingAction::SteppingAction(EventAction* tmp)
@@ -36,11 +30,9 @@ void SteppingAction::UserSteppingAction(const G4Step* astep)
 		return;
 
 	// accumulate the deposited energy in the tank
-	// no matter the post step is in tank or not, this step is in tank.
 	if (pre_name == "tank_pv"){
 		G4double step_erg = astep -> GetTotalEnergyDeposit();
 		if (step_erg > 1.0e-20)
 			eact -> add_energy(step_erg);
 	}
 }
-

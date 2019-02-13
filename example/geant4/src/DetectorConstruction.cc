@@ -1,11 +1,9 @@
 #include "DetectorConstruction.hh"
 
 DetectorConstruction::DetectorConstruction()
-:G4VUserDetectorConstruction()
-{}
+:G4VUserDetectorConstruction() {}
 
-DetectorConstruction::~DetectorConstruction()
-{}
+DetectorConstruction::~DetectorConstruction() {}
 
 G4VPhysicalVolume* DetectorConstruction::Construct()
 {
@@ -13,7 +11,6 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 	G4NistManager* nist = G4NistManager::Instance();
 	G4Material* air = nist -> FindOrBuildMaterial("G4_AIR");
 	G4Material* wax = nist -> FindOrBuildMaterial("G4_PARAFFIN");
-
 
 	G4double boxx = 10.0 * cm, boxy = 10.0 * cm, boxz = 10.0 * cm;
 

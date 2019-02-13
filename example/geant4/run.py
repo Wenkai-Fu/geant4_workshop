@@ -1,16 +1,13 @@
 import numpy as np
 import os
 
-
 def writer(history):
     """UI mac file writer
         history: int
-            number of MC histories
+            number of histories
     """
     with open('./run.mac', 'w') as f:
-        s = """ # UI mac file for the MSND model. 
-
-# Initialize kernel
+        s = """# Initialize kernel
 /run/initialize
 
 # verbose setting
@@ -31,21 +28,12 @@ def writer(history):
 
 /gps/ene/mono 1 MeV
 
-/run/beamOn HISTORY
-"""
+/run/beamOn HISTORY"""
         s = s.replace('HISTORY', '%i'%history)
         
         f.write(s)
                 
 if __name__ == '__main__':
-    writer(100)
+    writer(1000)
+    os.system("cd build && rm -rf * && cmake .. && make -j20")
     os.system("./build/msnd run.mac > out.txt")
-    
-    
-    
-    
-    
-    
-    
-    
-    

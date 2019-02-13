@@ -1,10 +1,3 @@
-/*
- * EventAction.hh
- *
- *  Created on: Jul 2, 2017
- *      Author: kevin
- */
-
 #ifndef INCLUDE_EVENTACTION_HH_
 #define INCLUDE_EVENTACTION_HH_
 
@@ -27,8 +20,4 @@ private:
 	G4double erg;
 	RunAction* ract;
 };
-
-
-
-
-#endif /* INCLUDE_EVENTACTION_HH_ */
+#endif

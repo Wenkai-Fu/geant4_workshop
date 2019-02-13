@@ -2,9 +2,7 @@
 #define PrimaryGeneratorAction_h 1
 
 #include "G4VUserPrimaryGeneratorAction.hh"
-#include "globals.hh"
 #include "G4GeneralParticleSource.hh"
-#include "G4Event.hh"
 
 class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
@@ -18,6 +16,4 @@ class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
   private:
     G4GeneralParticleSource* generator;
 };
-
-
 #endif

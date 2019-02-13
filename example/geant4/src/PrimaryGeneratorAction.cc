@@ -6,13 +6,11 @@ PrimaryGeneratorAction::PrimaryGeneratorAction()
 	generator = new G4GeneralParticleSource();
 }
 
-
 PrimaryGeneratorAction::~PrimaryGeneratorAction()
 {
   if (generator)
 	  delete generator;
 }
-
 
 void PrimaryGeneratorAction::GeneratePrimaries(G4Event* anEvent)
 {

@@ -4,10 +4,8 @@ ActionInitialization::ActionInitialization()
  : G4VUserActionInitialization()
 {}
 
-
 ActionInitialization::~ActionInitialization()
 {}
-
 
 void ActionInitialization::BuildForMaster() const
 {
@@ -27,5 +25,4 @@ void ActionInitialization::Build() const
 
   SteppingAction* sact = new SteppingAction(eact);
   SetUserAction(sact);
-}  
-
+}
